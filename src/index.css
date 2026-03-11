@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Core Brand Colors */
+  --color-brand-dark: #0F172A; /* Slate 900 */
+  --color-brand-lime: #C8EE85; /* Vibrant Lime */
+  --color-brand-purple: #8B5CF6; /* Violet 500 */
+  --color-brand-light-purple: #DDD6FE; /* Violet 200 */
+  --color-brand-blue-accent: #3B82F6; /* Blue 500 */
+  
+  /* Backgrounds & Surfaces */
+  --color-bg-light: #F8FAFC; /* Slate 50 */
+  --color-surface: #FFFFFF;
+  --color-surface-muted: #F1F5F9; /* Slate 100 */
+  
+  /* Text Colors */
+  --color-text-primary: #0F172A; /* Slate 900 */
+  --color-text-secondary: #64748B; /* Slate 500 */
+  --color-text-tertiary: #94A3B8; /* Slate 400 */
+  
+  /* Borders */
+  --color-border-light: #E2E8F0; /* Slate 200 */
+  
+  /* Legacy Mappings */
+  --color-brand-blue: #0F172A;
+  --color-brand-orange: #C8EE85;
+}
+
+@layer utilities {
+  .material-symbols-rounded {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    font-size: 24px;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .material-symbols-rounded.filled {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+}
+
+/* Common Card Styles */
+.card {
+  background-color: var(--color-surface);
+  border-radius: 1.5rem;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border: 1px solid var(--color-border-light);
+}
+
+/* Common Button Styles */
+.btn-primary {
+  background-color: var(--color-brand-dark);
+  color: white;
+  border-radius: 1rem;
+  padding: 0.875rem 1.5rem;
+  font-weight: 700;
+  font-family: var(--font-sans);
+  transition: all 0.2s ease;
+}
+.btn-primary:active {
+  transform: scale(0.98);
+}
+

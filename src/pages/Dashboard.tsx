@@ -152,7 +152,7 @@ export default function Dashboard() {
           <div className="flex items-center gap-3">
             <button 
               onClick={() => setShowNotifications(true)}
-              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm border border-white/10 shadow-inner hover:bg-white/20 transition-colors relative"
+              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm border border-white/10 shadow-inner hover:bg-white/20 transition-all active:scale-[0.97] ease-out duration-150 relative"
             >
               <span className="material-symbols-rounded text-brand-lime">notifications</span>
               <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border border-brand-dark"></span>
@@ -242,7 +242,7 @@ export default function Dashboard() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.05 + 0.2 }}
+                  transition={{ delay: index * 0.05 }}
                   className="flex flex-col items-center gap-2 group"
                 >
                   <div className={`w-14 h-14 rounded-2xl ${action.color} flex items-center justify-center shadow-sm group-hover:shadow-md transition-all group-active:scale-95`}>
@@ -265,7 +265,7 @@ export default function Dashboard() {
             {nearbyPGs.map((pg) => (
               <Link to={`/pg-details/${pg.id}`} key={pg.id} className="min-w-[260px] bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow group">
                 <div className="h-32 relative">
-                  <img src={pg.image} alt={pg.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src={pg.image} alt={pg.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[250ms] ease-out" />
                   <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-lg text-xs font-bold shadow-sm flex items-center gap-1">
                     <span className="material-symbols-rounded text-yellow-500 text-sm filled">star</span>
                     {pg.rating}

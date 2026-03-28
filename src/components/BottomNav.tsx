@@ -23,7 +23,7 @@ export default function BottomNav() {
             <Link
               key={item.path}
               to={item.path}
-              className="relative -top-6 bg-brand-lime text-brand-dark p-4 rounded-full shadow-lg shadow-brand-lime/40 hover:scale-105 transition-transform flex items-center justify-center"
+              className="relative -top-6 bg-brand-lime text-brand-dark p-4 rounded-full shadow-lg shadow-brand-lime/40 active:scale-95 transition-transform flex items-center justify-center"
             >
               <span className="material-symbols-rounded text-3xl">add</span>
             </Link>
